@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocacola Website Landing Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle">
+        </div>
+        <header>
+            <a href="#"><img src="images/logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()">
+
+            </div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Taste the Feeling</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eos recusandae minus ab ullam debitis
+                    explicabo iure delectus quisquam atque et, corrupti voluptatibus sit. Dolorem nesciunt fuga dicta?
+                    Libero, facilis.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="imgBox">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/cocacola1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cocacola2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cocacola3.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cocacola4.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cocacola5.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/cocacola6.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+        });
+
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        };
+    </script>
+</body>
+
+</html>
